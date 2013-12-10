@@ -90,7 +90,7 @@ var DbCollection = Collection.extend4000({
     },
 
     update: function(select,data,callback) {
-        this.get('collection').update(select, { '$set' : data }, callback)
+        this.get('collection').update(select, { '$set' : data }, {multi: true}, callback)
     }
 })
 
